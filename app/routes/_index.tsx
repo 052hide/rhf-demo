@@ -2,6 +2,8 @@ import { clsx } from 'clsx'
 
 import type { MetaFunction } from '@remix-run/node'
 
+import { TaskCreateForm } from '~/features/task/components/TaskCreateForm'
+
 export const meta: MetaFunction = () => {
   return [
     { title: 'New Remix App' },
@@ -10,5 +12,9 @@ export const meta: MetaFunction = () => {
 }
 
 export default function Index() {
-  return <div className={clsx('tw-flex tw-flex-col tw-gap-4')}>{'demo'}</div>
+  return (
+    <div className={clsx('tw-flex tw-flex-col tw-gap-4')}>
+      <TaskCreateForm />
+    </div>
+  )
 }
